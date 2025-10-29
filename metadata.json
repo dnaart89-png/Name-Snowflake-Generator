@@ -1,0 +1,5 @@
+{
+  "name": "Name Snowflake Generator",
+  "description": "Create a unique snowflake design by mirroring and rotating a name or word. Customize the number of arms, font, size, and color, then download your creation as a PNG or SVG.",
+  "requestFramePermissions": []
+}

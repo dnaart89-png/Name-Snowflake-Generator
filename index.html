@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalized Snowflake Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Bungee+Outline&family=Kumar+One+Outline&family=Libre+Baskerville:wght@400;700&family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&family=Cinzel:wght@400;700&family=Montserrat:wght@400;700&family=Raleway:wght@400;700&family=Great+Vibes&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <h1 class="brand">Personalized Snowflake Studio</h1>
+  <p class="tagline">Each Snowflake is Uniquely Yours</p>
+</header>
+
+<main class="container">
+  <section class="card stage">
+    <div class="stage-frame">
+      <svg id="flake" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-label="Snowflake preview">
+        <g id="root" transform="translate(250,250)"></g>
+      </svg>
+    </div>
+
+    <div class="controls">
+      <div class="grid">
+        <label>Word or Short Phrase <input id="word" value="Snowflake" /></label>
+        <label>Arms <input id="arms" type="number" min="3" max="24" value="6" /></label>
+        <label>Font size <input id="fs" type="number" value="40" /></label>
+        <label>Arm length (px) <input id="len" type="number" value="210" /></label>
+        <label>Join gap (px) <input id="gap" type="number" value="0" /></label>
+        <label>Tilt (°) <input id="tilt" type="number" value="0" /></label>
+        <label>Font
+          <select id="font">
+            <option value="Londrina Outline" data-kind="cursive">Londrina Outline</option>
+            <option value="Bungee Outline" data-kind="cursive">Bungee Outline</option>
+            <option value="Kumar One Outline" data-kind="serif">Kumar One Outline</option>
+            <option value="Libre Baskerville" data-kind="serif" selected>Libre Baskerville</option>
+            <option value="Playfair Display" data-kind="serif">Playfair Display</option>
+            <option value="Lora" data-kind="serif">Lora</option>
+            <option value="Cinzel" data-kind="serif">Cinzel</option>
+            <option value="Montserrat" data-kind="sans-serif">Montserrat</option>
+            <option value="Raleway" data-kind="sans-serif">Raleway</option>
+            <option value="Great Vibes" data-kind="cursive">Great Vibes</option>
+            <option value="Dancing Script" data-kind="cursive">Dancing Script</option>
+          </select>
+        </label>
+        <label>Color <input id="color" type="color" value="#000000" /></label>
+      </div>
+
+      <div class="buttons">
+        <button id="go" class="btn primary">Generate</button>
+        <button id="download" class="btn">Download PNG</button>
+        <button id="downloadSvg" class="btn">Download SVG</button>
+        <button id="reset" class="btn">Reset</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="card about">
+    <h3>❄ About Name Snowflake Studio</h3>
+    <p>Turn any name or word into a one-of-a-kind snowflake. Pick your font, color, and style — then download or share your creation.</p>
+    <p><strong>Coloring-friendly fonts:</strong> try <em>Londrina Outline</em>, <em>Bungee Outline</em>, or <em>Kumar One Outline</em>.</p>
+  </section>
+</main>
+
+<footer class="site-footer">© Name Snowflake Studio</footer>
+
+<script src="/index.js"></script>
+</body>
+</html>

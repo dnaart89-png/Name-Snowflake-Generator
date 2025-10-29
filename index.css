@@ -1,0 +1,70 @@
+:root{
+  --cran:#8b2323; --cran-2:#a43a3a; --gold:#d6b46a;
+  --ink:#262626; --paper:#fff; --glass:rgba(255,255,255,.7);
+  --shadow:0 12px 28px rgba(0,0,0,.14);
+}
+/* Full-bleed pretty background (always fills the page) */
+html,body{height:100%}
+body{
+  margin:0; color:var(--ink); font-family:'Libre Baskerville',serif;
+  background:
+    radial-gradient(1800px 900px at 50% -200px, rgba(255,255,255,.6), transparent 60%),
+    linear-gradient(180deg, #f6ecd8 0%, #eadcbd 40%, #e6d0a3 100%);
+  overflow-x:hidden;
+}
+
+/* Header */
+.site-header{
+  padding:22px 20px; color:#fff; box-shadow:var(--shadow);
+  background:linear-gradient(135deg,var(--cran),var(--cran-2));
+  border-bottom:6px solid var(--gold);
+  text-align:center;
+}
+.brand{margin:0; font-family:'Bungee Outline',system-ui, sans-serif; letter-spacing:2px; font-size:38px}
+.tagline{margin:.25rem 0 0; font-family:'Great Vibes',cursive; font-size:22px; opacity:.95}
+
+/* Main card */
+.container{max-width:1180px; margin:20px auto; padding:0 16px}
+.card{
+  background:rgba(255,255,255,.68);
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.8);
+  border-radius:16px; box-shadow:var(--shadow);
+}
+
+/* Stage */
+.stage{padding:14px}
+.stage-frame{
+  background: radial-gradient(circle at 50% 30%, rgba(214,180,106,.12), transparent 42%), var(--paper);
+  border-radius:12px; box-shadow: inset 0 0 0 2px rgba(0,0,0,.05);
+  overflow:hidden; position:relative; padding:10px;
+}
+svg{width:100%; height:auto; display:block}
+
+/* Controls */
+.controls{padding:14px; margin-top:14px}
+.grid{display:grid; gap:.7rem; grid-template-columns: repeat(2, minmax(0,1fr));}
+label{display:flex; align-items:center; justify-content:space-between; gap:.75rem; font-size:14px}
+input, select{
+  width:210px; max-width:60%;
+  padding:8px 10px; border-radius:10px; border:1px solid rgba(0,0,0,.15); background:#fff;
+}
+.buttons{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+.btn{
+  appearance:none; border:1px solid rgba(0,0,0,.12); background:#fff; color:var(--ink);
+  padding:10px 14px; border-radius:12px; font-weight:700; cursor:pointer; box-shadow:var(--shadow);
+  transition:transform .15s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.16) }
+.btn.primary{ background:linear-gradient(135deg, var(--gold), #c19a52); border-color:transparent; color:#2a2a2a }
+
+/* About box */
+.about{padding:18px; margin-top:18px}
+
+/* Footer */
+.site-footer{ text-align:center; font-size:12px; opacity:.75; padding:14px }
+
+@media (max-width:760px){
+  .grid{grid-template-columns: 1fr}
+  input,select{max-width:100%}
+}
